@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="b1" class="com.rakuten.libman.Book">
+<constructor-arg value="JAVA-Spring"></constructor-arg>
+<constructor-arg value="100" type="int"></constructor-arg>
+<constructor-arg value="674.34" type="double"></constructor-arg>
+<constructor-arg value="10" type="int"></constructor-arg>
+</bean>
+
+<bean id="b2" class="com.rakuten.libman.Book">
+<constructor-arg value="Csharp.NET"></constructor-arg>
+<constructor-arg value="30" type="int"></constructor-arg>
+<constructor-arg value="312.34" type="double"></constructor-arg>
+<constructor-arg value="5" type="int"></constructor-arg>
+</bean>
+<bean id="mapbookbean" class="com.rakuten.libman.BookMap">
+<constructor-arg >
+<map>
+<entry key="1120" value-ref="b1"></entry>
+<entry key="1127" value-ref="b2"></entry>
+</map>
+</constructor-arg>
+</bean>
+</beans>

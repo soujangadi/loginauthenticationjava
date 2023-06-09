@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="productsbean-1"  class="com.rakuten.libman.Products">
+    <constructor-arg value="154" type="int" ></constructor-arg>
+    <constructor-arg value="Projector" ></constructor-arg>
+    <constructor-arg value="154345.6" type="double" ></constructor-arg>
+    
+    </bean>
+     
+    
+     <bean id="companyaddressbean"  class="com.rakuten.libman.CompanyAdress">
+    <constructor-arg value="Bangalore" ></constructor-arg>
+    <constructor-arg value="Karnataka" ></constructor-arg>
+    </bean>
+    
+      <bean id="productbean_2"  class="com.rakuten.libman.Products" parent="productsbean-1">
+    <constructor-arg value="true" type="boolean"></constructor-arg>
+    <constructor-arg ref="companyaddressbean"></constructor-arg>
+     
+    </bean>
+    
+     </beans>
+    

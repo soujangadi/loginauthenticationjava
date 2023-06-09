@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="Bookbean-1"  class="com.rakuten.libman.Books">
+    <constructor-arg value="Two states" ></constructor-arg>
+    </bean>
+     
+    
+     <bean id="Authorbean-1"  class="com.rakuten.libman.Authors">
+    <constructor-arg value="cheatan Bhagath" ></constructor-arg>
+    </bean>
+    
+      <bean id="Bookbean-2"  class="com.rakuten.libman.Books">
+    <constructor-arg value="5 Am club" ></constructor-arg>
+     
+    </bean>
+    
+     <bean id="Authorbean-2"  class="com.rakuten.libman.Authors">
+    <constructor-arg value="Sudha murty" ></constructor-arg>
+    </bean>
+    
+    
+     <bean id="Librarybean"  class="com.rakuten.libman.Library">
+    <constructor-arg> 
+    <map>
+    <entry key-ref="Bookbean_1" value-ref="Authorbean_1"></entry>
+     <entry key-ref="Bookbean_2" value-ref="Authorbean_2"></entry>
+    </map>
+     </constructor-arg>
+    </bean>
+    
+</beans>
